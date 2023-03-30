@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Dates</h1>
+
+<p>Add zeros and colons to display the time:</p>
+
+<p id="demo"></p>
+
+<script>
+function addZero(x,n) {
+  while (x.toString().length < n) {
+    x = "0" + x;
+  }
+  return x;
+}
+
+const d = new Date();
+let h = addZero(d.getHours(), 2);
+let m = addZero(d.getMinutes(), 2);
+let s = addZero(d.getSeconds(), 2);
+let ms = addZero(d.getMilliseconds(), 3);
+let time = h + ":" + m + ":" + s + ":" + ms;
+document.getElementById("demo").innerHTML = time;
+</script>
+
+</body>
+</html>
